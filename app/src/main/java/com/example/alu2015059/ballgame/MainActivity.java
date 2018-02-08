@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         float aX = sensorEvent.values[0];
         float aY = sensorEvent.values[1];
         float aZ = sensorEvent.values[2];
-        gameView.update(aX, aY);
+        gameView.update(-aX, aY);
     }
 
     @Override

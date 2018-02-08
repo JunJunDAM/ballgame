@@ -78,10 +78,10 @@ public class GameView extends View{
         y += vy * deltaT;
         int w = getWidth();
         int h = getHeight();
-        if(x < -w /2 + RADIUS) vx = -vx;
-        if(x > w / 2 - RADIUS) vx = -vx;
-        if(y < -h / 2 + RADIUS) vy = -vy;
-        if(y > h / 2 - RADIUS) vy = -vy;
+        if(x < -w /2 + RADIUS) {vx = -vx; x = -w / 2 + RADIUS;}
+        if(x > w / 2 - RADIUS) {vx = -vx; x = w / 2 - RADIUS;}
+        if(y < -h / 2 + RADIUS) {vy = -vy; y = -h / 2 + RADIUS;}
+        if(y > h / 2 - RADIUS) {vy = -vy; y = h / 2 - RADIUS;}
     }
 
     @Override public void onDraw(Canvas canvas){
